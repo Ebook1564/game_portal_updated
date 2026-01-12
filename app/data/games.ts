@@ -88,7 +88,7 @@ export const games: Game[] = [
     embedUrl: "/games/Cars Racing/index.html",
     description:
       "Top-down racer with quick laps and tight turns—beat the clock and the competition.",
-    orientation: "landscape",
+    orientation: "portrait",
   },
   {
     uid: 8,
@@ -411,7 +411,7 @@ export const games: Game[] = [
     slug: "rising-star",
     thumb: "/assets/rising-star.png",
     categories: ["arcade"],
-    embedUrl: "/games/Raising Star/index.html",
+    embedUrl: "/games/Rising Star/index.html",
     description: "Climb upward past obstacles in a rising challenge.",
     orientation: "portrait",
   },
