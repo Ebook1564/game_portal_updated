@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import type { Metadata } from 'next';
 
 const nekst = localFont({
   src: [
@@ -12,6 +13,12 @@ const nekst = localFont({
   variable: "--font-nekst",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  other: {
+    'google-adsense-account': 'ca-pub-3518028158462445',
+  },
+};
 
 export default function RootLayout({
   children,
