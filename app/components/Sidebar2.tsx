@@ -17,6 +17,11 @@ const utilityLinks = [
   { label: "Feedback", href: "mailto:team@example.com" },
   { label: "Support", href: "#support" },
 ];
+const companyLinks =[
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Business Enquiries", href: "/enquire" },
+]
 
 export default function Sidebar2() {
   const [isOpen, setIsOpen] = useState(true);
@@ -70,6 +75,31 @@ export default function Sidebar2() {
 
             <div className="mt-3 space-y-2">
               {utilityLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="
+                    relative block px-3 py-2 text-sm text-slate-100
+                    after:absolute after:left-3 after:bottom-1
+                    after:h-[2px] after:w-0 after:bg-indigo-400
+                    after:transition-all after:duration-200
+                    hover:after:w-[calc(100%-1.5rem)]
+                    hover:text-indigo-300
+                  "
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 pt-4">
+            <p className="text-xs uppercase tracking-[0.28em] text-indigo-200/80">
+              Company
+            </p>
+
+            <div className="mt-3 space-y-2">
+              {companyLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

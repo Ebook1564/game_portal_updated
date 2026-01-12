@@ -18,6 +18,12 @@ const utilityLinks = [
   { label: "Support", href: "#support" },
 ];
 
+const companyLinks =[
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Business Enquiries", href: "/enquire" },
+]
+
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -52,6 +58,22 @@ export default function Sidebar() {
 
             <div className="mt-4 flex w-full flex-col items-center space-y-2">
               {utilityLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block w-full text-center px-2 py-3 text-base font-medium text-slate-100 hover:text-indigo-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full border-t border-white/6 pt-4">
+            <p className="text-xs uppercase tracking-widest text-indigo-200/80 pl-1">Company</p>
+
+            <div className="mt-4 flex w-full flex-col items-center space-y-2">
+              {companyLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
