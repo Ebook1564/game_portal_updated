@@ -1,0 +1,28 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "settings": "AJUSTES",
+        "language": "Idioma:",
+        "sounds": "Sonido:",
+        "wheel": "RUEDA DE CATEGORÍA",
+        "help": "AYUDA",
+        "shop": "COMERCIO",
+        "awesome": "¡IMPRESIONANTE!",
+        "continue": "CONTINUAR",
+        "found": "Encontraste la solución...",
+        "reveal": "Revelar\n[size=30]? LETRAS[/size]\nEmbalar",
+        "remove": "Eliminar\n[size=30]? LETRAS[/size]\nEmbalar",
+        "best": "Mejor puntuación:",
+        "spin": "GIRAR",
+        "topic": "TEMA",
+        "start": "COMENZAR",
+        "help1": "Adivina la palabra común entre las imágenes.",
+        "help2": "Usa las letras para construir la palabra.",
+        "help3": "Utilice las herramientas de ayuda si está atascado",
+        "gameover": "Juego Terminado",
+        "try": "Intentar otra vez ...",
+        "menu": "Menú Principal",
+        "earn": "Has ganado ? monedas!",
+        "paused": "PAUSA"
+    }
+}

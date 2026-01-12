@@ -1,0 +1,26 @@
+{
+	"levels": [
+		{ "emptyCols":2,"emptyRows":2, "obstacle_pairs":4, "onet_count":0 }
+		
+		,{ "emptyCols":6,"emptyRows":8, "obstacle_pairs":1, "onet_count":2 }
+		,{ "emptyCols":4,"emptyRows":8, "obstacle_pairs":1, "onet_count":4 }
+		,{ "emptyCols":4,"emptyRows":6, "obstacle_pairs":1, "onet_count":6 }
+		,{ "emptyCols":4,"emptyRows":6, "obstacle_pairs":2, "onet_count":6 }
+		,{ "emptyCols":4,"emptyRows":6, "obstacle_pairs":2, "onet_count":8 }
+		,{ "emptyCols":4,"emptyRows":6, "obstacle_pairs":2, "onet_count":12 }
+		,{ "emptyCols":4,"emptyRows":4, "obstacle_pairs":3, "onet_count":10 }
+		,{ "emptyCols":4,"emptyRows":4, "obstacle_pairs":3, "onet_count":10 }
+		,{ "emptyCols":4,"emptyRows":4, "obstacle_pairs":3, "onet_count":12 }
+		,{ "emptyCols":4,"emptyRows":4, "obstacle_pairs":4, "onet_count":14 }
+		,{ "emptyCols":4,"emptyRows":4, "obstacle_pairs":4, "onet_count":16 }
+		,{ "emptyCols":4,"emptyRows":4, "obstacle_pairs":4, "onet_count":16 }
+		,{ "emptyCols":2,"emptyRows":4, "obstacle_pairs":4, "onet_count":18 }
+		,{ "emptyCols":2,"emptyRows":4, "obstacle_pairs":4, "onet_count":20 }
+		,{ "emptyCols":2,"emptyRows":4, "obstacle_pairs":5, "onet_count":22 }
+		,{ "emptyCols":2,"emptyRows":4, "obstacle_pairs":5, "onet_count":26 }
+		,{ "emptyCols":2,"emptyRows":2, "obstacle_pairs":6, "onet_count":28 }
+		,{ "emptyCols":2,"emptyRows":2, "obstacle_pairs":6, "onet_count":30 }
+		,{ "emptyCols":2,"emptyRows":2, "obstacle_pairs":7, "onet_count":28 }
+		,{ "emptyCols":2,"emptyRows":2, "obstacle_pairs":7, "onet_count":30 }
+	]
+}

@@ -1,0 +1,160 @@
+import GamePlayer from "./GamePlayer";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { games } from "../../data/games";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export function generateStaticParams() {
+  return games.map((game) => ({ slug: game.slug }));
+}
+
+export default async function GameDetailPage({ params }: Props) {
+  const { slug } = await params;
+
+  const game = games.find((item) => item.slug === slug);
+
+  if (!game) {
+    return notFound();
+  }
+
+  const similar = games
+    .filter(
+      (item) =>
+        item.slug !== game.slug &&
+        item.categories.some((cat) => game.categories.includes(cat)),
+    )
+    .slice(0, 3);
+
+  const isPortrait = game.orientation === "portrait";
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 px-6 pb-16 pt-12 text-white">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
+        <div className="flex items-center justify-between">
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.26em] text-indigo-200/80">
+              Game
+            </p>
+            <div className="flex items-center gap-3">
+              {game.thumb ? (
+                <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-white/10 bg-white/10">
+                  <Image
+                    src={game.thumb}
+                    alt={game.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/10 text-xs font-semibold text-white">
+                  {game.title.slice(0, 2)}
+                </div>
+              )}
+              <div>
+                <h1 className="text-3xl font-semibold">{game.title}</h1>
+                <div className="flex flex-wrap gap-2">
+                  {game.categories.map((cat) => (
+                    <span
+                      key={cat}
+                      className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-indigo-100/90"
+                    >
+                      {cat}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <Link
+            href="/"
+            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-transparent hover:bg-white/10"
+          >
+            ← Back to portal
+          </Link>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-[2fr,1fr]">
+          <div className="space-y-4">
+          
+            <GamePlayer
+              embedUrl={game.embedUrl}
+              title={game.title}
+              orientation={game.orientation}
+            />
+			<div
+              className="overflow-hidden rounded-2xl border border-white/10 bg-black/70 shadow-xl"
+              style={{
+                height: isPortrait ? "80vh" : "60vh",
+                aspectRatio: isPortrait ? "3 / 4" : "16 / 9",
+                maxWidth: "100%",
+              }}
+            >
+            <div className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-100 backdrop-blur">
+              <h2 className="text-xl font-semibold">About this game</h2>
+              <p className="text-slate-100/80">{game.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {game.categories.map((cat) => (
+                  <span
+                    key={cat}
+                    className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-indigo-100/90"
+                  >
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+              <h3 className="text-lg font-semibold text-white">Similar games</h3>
+              <p className="text-sm text-slate-200/80">
+                Based on shared categories.
+              </p>
+              <div className="mt-4 space-y-3">
+                {similar.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/games/${item.slug}`}
+                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3 transition hover:border-transparent hover:bg-white/10"
+                  >
+                    <div className="relative h-16 w-16 overflow-hidden rounded-lg">
+                      <Image
+                        src={item.thumb}
+                        alt={item.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white">{item.title}</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-indigo-100/80">
+                        {item.categories.slice(0, 2).join(" • ")}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+                {similar.length === 0 ? (
+                  <p className="text-sm text-slate-200/70">
+                    No similar games yet—explore the full catalog instead.
+                  </p>
+                ) : null}
+              </div>
+            </div>
+            <Link
+              href={game.embedUrl}
+              target="_blank"
+              className="block rounded-2xl border border-white/10 bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-3 text-center text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+            >
+              Open in new tab
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,256 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>Air Hockey Construct 3 HTML5 Game - Air Hockey in HTML5</title>
+
+	<meta name="description" content="How many points can you score?">
+	<meta name="author" content="Sparximer">
+	<meta name="copyright" content="Sparximer">
+	<meta name="generator" content="Documenter v2.0 https://evp.to/documenter">
+	<meta name="date" content="2022-04-08T00:00:00+02:00">
+
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+
+</head>
+<body class="documenter-project-air-hockey-construct-3-html5-game">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#included_files" title="Included Files">Included Files</a></li>
+			<li><a href="#construct_3" title="Construct 3">Construct 3</a></li>
+			<li><a href="#game_modifications" title="Game Modifications">Game Modifications</a></li>
+			<li><a href="#publishing" title="Publishing">Publishing</a></li>
+			<li><a href="#html5" title="HTML5">HTML5</a></li>
+			<li><a href="#tips" title="Tips">Tips</a></li>
+			<li><a href="#thanks" title="Thanks!">Thanks!</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Sparximer 2022<br>
+		made with the <a href="https://evp.to/documenter">Documenter v2.0</a>
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Air Hockey Construct 3 HTML5 Game</h1>
+	<h2>Air Hockey in HTML5</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 04/08/2022</li>
+	<li>latest update: 04/08/2022</li>
+	<li>by: Sparximer</li>
+	<li><a href="http://www.sparximer.com/">www.sparximer.com/</a></li>
+	<li>email: <a href="mailto:&#115;&#112;&#97;&#114;&#120;&#105;&#109;&#101;&#114;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#115;&#112;&#97;&#114;&#120;&#105;&#109;&#101;&#114;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>Thank you for purchasing my game. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here. Thanks so much!</p>
+	</section>
+
+	<section id="included_files">
+	<div class="page-header"><h3>Included Files</h3><hr class="notop"></div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	what you receive are the following:</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	1) The HTML5 Game&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	2) The Construct 3 c3p file ( game source code )</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	3) This simple documentation file</div>
+</section>
+<section id="construct_3">
+	<div class="page-header"><h3>Construct 3</h3><hr class="notop"></div>
+<h3 style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	What is Construct 3?&nbsp; &nbsp;</h3>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	It&#39;s the game engine used to build this game, and then the game got compiled into HTML5 that you can simply upload to your website</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	This is what the game looks like in the Game Engine:</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="assets/images/c3.png" style="height: 750px; width: 750px;"></div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<hr>
+	<hr>
+	<p>		&nbsp;</p>
+</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	To modify the game, use the c3p file, the code is organized and grouped for easier modification.</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	Visit editor.construct.net, Construct 3 runs right in your browser! There is nothing to install or set up. If you see an error, check the system requirements page, you might need to update your browser or system.</div>
+</section>
+<section id="game_modifications">
+	<div class="page-header"><h3>Game Modifications</h3><hr class="notop"></div>
+<h1>
+	Replace Images</h1>
+<p>	Open the Construct 3 project ( c3p ), and double click on any image or sprite.<br>
+	Click the &quot;Load images from files&quot; button at the top left, Choose your image and close the pop up.<br>
+	Do this for all the images you want to replace.<br>
+	NOTE: Make sure your images are the same size ( width and height ) as the original images<br>
+	&nbsp;</p>
+<p>	<img alt="" src="assets/images/sprite.png" style="width: 750px; height: 750px;"></p>
+<h1>
+	Sounds &amp; Music</h1>
+<p>	Open the Media folder inside the html5 game, you will find all the sound effects and music files here.</p>
+<p>	Simply replace them with your own files, making sure you keep the name and format the same!</p>
+<p>	&nbsp;</p>
+<p>	<img alt="" src="assets/images/media.png" style="width: 750px; height: 750px;"></p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+<h1>
+	Variables</h1>
+<p>	Some games have variables that you can edit to change the game experience, like max hp of players or enemies</p>
+<p>	Always take a look at all the global variables in the event sheets, and read them well to know what they do.</p>
+<p>	&nbsp;</p>
+<p>	<img alt="" src="assets/images/variables.png" style="width: 750px; height: 750px;"></p>
+<p>	&nbsp;</p>
+<h1>
+	Changing Texts</h1>
+<p>	To change texts, open the Construct 3 file, and click on any Text object, and on the left side inside the Properties panel you will see &quot;Text&quot; field, change this to whatever text you want.&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	<img alt="" src="assets/images/text.png" style="width: 750px; height: 750px;"></p>
+</section>
+<section id="publishing">
+	<div class="page-header"><h3>Publishing</h3><hr class="notop"></div>
+<p>	After you modiffy the game using Construct 3, you will want to publish it or export it, use the MENU &gt; PROJECT &gt; EXPORT option.</p>
+<p>	You will see a pop like this</p>
+<p>	<img alt="" src="assets/images/export.png" style="width: 750px; height: 750px;"></p>
+<p>	Construct 3 allows you to export to a range of platforms, such as the web (HTML5), Android and iOS (via Cordova), and desktop apps (via Windows/macOS wrappers or NW.js).</p>
+<hr>
+<p>	<a href="https://www.construct.net/en/make-games/manuals/construct-3/overview/publishing-projects">Learn more on publishing options on Construct 3</a></p>
+<p>	&nbsp;</p>
+</section>
+<section id="html5">
+	<div class="page-header"><h3>HTML5</h3><hr class="notop"></div>
+<h3 style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	Hosting</h3>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	If you want to use the HTML5 Game as it is made, or after you have exported the game from Construct 3, you will need a web server to upload your game to, Go to your File Manager, and go to the &quot;public_html&quot; directory where your websites are usually. Your website folder will exist as a folder with the example name &quot;www.example2.com&quot;<br>
+	Open the folder and place the content of your HTML5 game there, not the game folder, but its content.</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.inmotionhosting.com%2Fsupport%2Fwebsite%2Fhow-to-upload-files-server%2F&amp;psig=AOvVaw1N-Trd_wx5H_N9t4GtMZ7v&amp;ust=1638466687001000&amp;source=images&amp;cd=vfe&amp;ved=0CAsQjRxqFwoTCNCUjbqSw_QCFQAAAAAdAAAAABAD"></div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="assets/images/cpanel.png"  ></div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	If you don&#39;t have a host, there are many services where you can rent a cheap static file host. The specific steps for uploading files to your server depend on your host. If you need help finding out how to do that, contact your host.</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<hr>
+	<hr>
+	<p>		&nbsp;</p>
+</div>
+<h3 style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<strong><span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; font-family: inherit; vertical-align: baseline;">Embedding&nbsp;</span></strong></h3>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	If you want to embed a game inside another web page, you can display it using an iframe element. Simply point the iframe to the web address of your game. For example:</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&lt;iframe src=&quot;https://www.mywebsite.com/mygame/&quot; width=&quot;600&quot; height=&quot;400&quot; scrolling=&quot;no&quot; noresize=&quot;noresize&quot; /&gt;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	This will create a fixed size iframe (600x400) inside of which the game will appear. By default the game will automatically scale to fill whatever size the iframe is set to. However if it&#39;s a fixed size game, make sure the width and height attributes of the iframe tag match the viewport size of the game.</div>
+</section>
+<section id="tips">
+	<div class="page-header"><h3>Tips</h3><hr class="notop"></div>
+<ol>
+	<li>		Don&#39;t rename any file from the game files, if you do that, the game will not launch as it will not find all its elements the way it expects</li>
+	<li>		Don&#39;t replce the images with different size images, make sure the image sizes are exactly the same</li>
+	<li>		Some game images have more than 1 sprite merged together, this is Construct 3&#39;s way of organizing spritesheets, so if you want to replace a single sprite from the group, make sure you respect its edges and dont go beyond them. Otherwise you will see the images look funny in the game</li>
+	<li>		You can replace sound effects with your own, just make sure the sound files have the same name as the originals</li>
+</ol>
+</section>
+<section id="thanks">
+	<div class="page-header"><h3>Thanks!</h3><hr class="notop"></div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	if you need help or have some requests, please email me or PM me from my codecanyon profile</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&#115;&#112;&#97;&#114;&#120;&#105;&#109;&#101;&#114;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</div>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	Good luck with your project!</div>
+</section>
+
+	</div>
+</body>
+</html>

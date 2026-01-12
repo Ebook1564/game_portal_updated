@@ -1,0 +1,30 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "settings": "SETTINGS",
+        "language": "Language:",
+        "sounds": "Sound:",
+        "wheel": "CATEGORY WHEEL",
+        "help": "HELP",
+        "shop": "SHOP",
+        "youwon": "You Won!",
+        "continue": "CONTINUE",
+        "found": "You found the solution...",
+        "reveal": "? Reveals",
+        "remove": "? Removes",
+        "best": "Best Score:",
+        "spin": "SPIN",
+        "topic": "TOPIC",
+        "start": "START",
+        "help1": "Guess the word that resembles the picture.",
+        "help2": "Use the letters to build the word",
+        "help3": "Use the help tools if you are stuck",
+        "gameover": "Game Over",
+        "try": "Try again ...",
+        "menu": "Main Menu",
+        "earn": "You've won ? coins!",
+        "time": "Time",
+        "timeout": "Time Out",
+        "currentlevel": "Level"
+    }
+}

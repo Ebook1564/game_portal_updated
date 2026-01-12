@@ -1,0 +1,30 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "settings": "AJUSTES",
+        "language": "Idioma:",
+        "sounds": "Sonido:",
+        "wheel": "RUEDA DE CATEGORÍA",
+        "help": "AYUDA",
+        "shop": "COMERCIO",
+        "youwon": "¡Ganaste!",
+        "continue": "CONTINUAR",
+        "found": "Encontraste la solución...",
+        "reveal": "? revela",
+        "remove": "? Elimina",
+        "best": "Mejor puntuación:",
+        "spin": "GIRAR",
+        "topic": "TEMA",
+        "start": "COMENZAR",
+        "help1": "Adivina la palabra que se parece a la imagen",
+        "help2": "Usa las letras para construir la palabra.",
+        "help3": "Utilice las herramientas de ayuda si está atascado",
+        "gameover": "Juego Terminado",
+        "try": "Intentar otra vez ...",
+        "menu": "Menú Principal",
+        "earn": "Has ganado ? monedas!",
+        "time": "Tiempo",
+        "timeout": "Se acabó el tiempo",
+        "currentlevel": "Nivel"
+    }
+}
