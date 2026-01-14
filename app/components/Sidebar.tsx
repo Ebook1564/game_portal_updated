@@ -29,7 +29,7 @@ export default function Sidebar() {
 
   return (
   // hidden on small screens, sticky within the centered layout on large screens
-  <aside className="hidden lg:block z-20 mb-8 h-min w-56 rounded-3xl border border-white/8 bg-linear-to-b from-slate-900/90 to-[#071026]/80 backdrop-blur-lg shadow-lg transition-all duration-300 lg:sticky lg:top-28">
+  <aside className="lg:block z-20 mb-8 h-fit sticky self-start w-56 rounded-3xl border border-white/8 bg-linear-to-b from-slate-900/90 to-[#071026]/80 backdrop-blur-lg shadow-lg transition-all duration-300 lg:sticky lg:top-28">
       {isOpen && (
         <div className="flex flex-col items-center space-y-6 p-6">
           <div className="w-full">

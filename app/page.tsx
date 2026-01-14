@@ -25,14 +25,14 @@ export default function Home() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-  <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-linear-to-br from-slate-950 via-indigo-950 to-slate-900 px-0 pb-1 text-white">
+  <div className="relative flex flex-col min-h-full flex-col overflow-x-hidden bg-linear-to-br from-slate-950 via-indigo-950 to-slate-900 px-0 pb-1 text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.2),transparent_35%),radial-gradient(circle_at_80%_0,rgba(236,72,153,0.12),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(16,185,129,0.12),transparent_32%)]" />
     <Navbar onOpenSidebar={() => setMobileSidebarOpen(true)} />
     <MobileSidebar open={mobileSidebarOpen} onClose={() => setMobileSidebarOpen(false)} />
 
-  <main className="relative z-10 w-full overflow-x-hidden pt-24 flex-1">
+  <main className="relative z-10 w-full pt-24 flex-1">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div className="flex w-full flex-col lg:flex-row justify-center items-start gap-8">
+      <div className="flex w-full lg:flex-row gap-8 overflow-visible">
         <Sidebar />
 
         <div className="w-full max-w-4xl">
@@ -107,10 +107,12 @@ export default function Home() {
         </div>
       </div>
     </div>
+    
   </main>
-      <div className="relative   ">
+  <div className="relative   ">
         <Footer_on_page />
       </div>
+      
 
     </div>
     

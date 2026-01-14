@@ -41,16 +41,7 @@ export default function GamesListingPage() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                        <div className="relative group flex-1 sm:w-64">
-                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
-                            <input
-                                type="text"
-                                placeholder="Search games..."
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full rounded-xl border border-white/5 bg-white/5 pl-12 pr-4 py-3 text-sm text-white focus:border-indigo-500 focus:outline-none transition-all"
-                            />
-                        </div>
+                        
                     </div>
                 </div>
 

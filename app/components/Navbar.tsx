@@ -66,7 +66,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
 
   return (
     <nav className="w-full fixed top-0 left-0 z-50">
-      <div className="backdrop-blur-md bg-gradient-to-r from-black/40 via-transparent to-black/30 border-b border-white/5">
+      <div className="glass-gradient">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-4">
@@ -88,15 +88,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                 <span className="text-xl font-bold text-white tracking-wide hidden sm:inline">snappgames</span>
               </Link>
 
-              <div className="hidden md:flex md:items-center md:space-x-4">
-                <Link href="#trending" className="text-sm font-medium text-slate-200 hover:text-white">Trending</Link>
-                <Link href="#puzzle" className="text-sm font-medium text-slate-200 hover:text-white">Puzzle</Link>
-                <Link href="#arcade" className="text-sm font-medium text-slate-200 hover:text-white">Arcade</Link>
-                <Link href="#strategy" className="text-sm font-medium text-slate-200 hover:text-white">Strategy</Link>
-                <Link href="#casual" className="text-sm font-medium text-slate-200 hover:text-white">Casual</Link>
-              </div>
-            </div>
-
+          </div>  
             <div className="flex items-center gap-2 sm:gap-3">
               {/* Mobile: Search Icon Only */}
               <button
@@ -111,7 +103,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
 
               {/* Desktop: Full Search Bar */}
               <div className="hidden md:block relative" ref={searchRef}>
-                <div className="flex items-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all group px-4 py-3 shadow-xl w-64 lg:w-80">
+                <div className="flex items-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all group px-4 py-3 shadow-xl w-64 lg:w-150">
                   <svg className="w-5 h-5 text-slate-300 group-hover:text-white mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
@@ -138,7 +130,8 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
 
                 {/* Desktop Search Results */}
                 {showResults && (
-                    <div className="absolute top-full left-0 right-0 mt-2 w-full max-w-[28rem] backdrop-blur-md bg-gradient-to-r from-black/40 via-transparent to-black/30 border-b border-white/5 rounded-2xl shadow-2xl z-50 max-h-96 overflow-hidden animate-in slide-in-from-top-2 duration-200">                    <div className="max-h-96 overflow-y-auto">
+                    <div className="absolute top-full left-0 right-0 mt-2 w-full max-w-[28rem] glass-gradient rounded-2xl shadow-2xl z-50 max-h-96 overflow-hidden animate-in slide-in-from-top-2 duration-200">                    
+                    <div className="max-h-96 overflow-y-auto">
                       {searchResults.map((game) => (
                         <Link
                           key={game.uid}

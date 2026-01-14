@@ -37,6 +37,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@layer utilities {
+  .glass-gradient {
+    @apply backdrop-blur-md
+      bg-gradient-to-r
+      from-black/60
+      via-transparent
+      to-black/60
+      border-b
+      border-white/5;
+  }
+}
 
 
 .hide-scrollbar {
