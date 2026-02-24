@@ -53,6 +53,7 @@ export default function GameTile({ game, size = "sm" }: Props) {
           {title}
         </h3>
       </div>
+      
     </Link>
   );
 }

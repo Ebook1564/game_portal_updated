@@ -23,6 +23,7 @@ export const games: Game[] = [
     description:
       "Slide numbered tiles on a grid to combine them and reach the 2048 tile in this minimalist logic puzzler.",
     orientation: "portrait",
+    
   },
   {
     uid: 2,

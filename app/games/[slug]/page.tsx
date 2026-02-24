@@ -1,5 +1,6 @@
 import GameDetailClient from "./GameDetailClient";
 import GamePlayer from "./GamePlayer";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -84,6 +85,32 @@ export default async function GameDetailPage({ params }: Props) {
                 orientation={game.orientation}
               />
             </div>
+
+            {/* AdSense: only render for the 2048 game */}
+            {game.slug === "2048" && (
+              <div className="mt-6 flex w-full justify-center">
+                {/* Load AdSense library once (client-side) */}
+                <Script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6157121429363510"
+                  crossOrigin="anonymous"
+                />
+
+                <div className="w-full max-w-3xl">
+                  <ins
+                    className="adsbygoogle"
+                    style={{ display: "block" }}
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-6157121429363510"
+                    data-ad-slot="6826144943"
+                  ></ins>
+
+                  <Script id="ads-init-2048">
+                    {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+                  </Script>
+                </div>
+              </div>
+            )}
 
             {/* ABOUT SECTION - Moved here for better flow on mobile */}
             <section className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
