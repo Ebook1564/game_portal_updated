@@ -31,11 +31,12 @@ export default function Home() {
     <MobileSidebar open={mobileSidebarOpen} onClose={() => setMobileSidebarOpen(false)} />
 
   <main className="relative z-10 w-full pt-24 flex-1">
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div className="flex w-full lg:flex-row gap-8 overflow-visible">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row w-full gap-8 overflow-visible items-start">
+        {/* Sidebar is hidden on small screens via its own classes (hidden lg:block) */}
         <Sidebar />
 
-        <div className="w-full max-w-4xl">
+        <div className="flex-1 w-full max-w-4xl">
           <div className="space-y-12">
             <header className="space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-indigo-200/80">

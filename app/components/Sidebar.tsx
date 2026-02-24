@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
@@ -26,10 +26,25 @@ const companyLinks =[
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
+  const [isLarge, setIsLarge] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    // Run only on client: detect large screens (lg = 1024px)
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsLarge(mq.matches);
+    update();
+    mq.addEventListener?.("change", update);
+    return () => mq.removeEventListener?.("change", update);
+  }, []);
+
+  // If we haven't measured yet, render nothing to avoid hydration mismatch
+  if (isLarge === null) return null;
+
+  // Do not render the sidebar DOM on small screens at all
+  if (!isLarge) return null;
 
   return (
-  // hidden on small screens, sticky within the centered layout on large screens
-  <aside className="lg:block z-20 mb-8 h-fit sticky self-start w-56 rounded-3xl border border-white/8 bg-linear-to-b from-slate-900/90 to-[#071026]/80 backdrop-blur-lg shadow-lg transition-all duration-300 lg:sticky lg:top-28">
+    <aside className="z-20 mb-8 h-fit sticky self-start w-56 rounded-3xl border border-white/8 bg-linear-to-b from-slate-900/90 to-[#071026]/80 backdrop-blur-lg shadow-lg transition-all duration-300 lg:sticky lg:top-28">
       {isOpen && (
         <div className="flex flex-col items-center space-y-6 p-6">
           <div className="w-full">

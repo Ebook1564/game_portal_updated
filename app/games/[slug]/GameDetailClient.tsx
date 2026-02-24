@@ -43,12 +43,13 @@ export default function GameDetailClient({ game }: any) {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
+        {/* On small screens: horizontal scroll; on larger, stacked list */}
+        <div className="flex gap-4 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-col">
           {similar.map((item) => (
             <Link
               key={item.slug}
               href={`/games/${item.slug}`}
-              className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition-all hover:bg-white/10 hover:border-white/20 active:scale-[0.98]"
+              className="group flex min-w-[220px] sm:min-w-0 sm:w-full items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition-all hover:bg-white/10 hover:border-white/20 active:scale-[0.98] flex-shrink-0 sm:flex-shrink"
             >
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl shadow-lg">
                 <Image

@@ -1,5 +1,6 @@
 import GameDetailClient from "./GameDetailClient";
 import GamePlayer from "./GamePlayer";
+import GameShareButton from "./GameShareButton";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
@@ -125,18 +126,19 @@ export default async function GameDetailPage({ params }: Props) {
 
           {/* SIDEBAR SIDE */}
           <div className="flex flex-col gap-8">
-            <div className="lg:sticky lg:top-24 space-y-8">
-              <GameDetailClient game={game} />
+              <div className="lg:sticky lg:top-24 space-y-8">
+                <GameDetailClient game={game} />
 
-              {/* Optional: Add a call to action or community section here */}
-              <div className="rounded-3xl bg-gradient-to-br from-indigo-600/20 to-pink-600/20 p-8 border border-white/10 backdrop-blur-sm">
-                <h3 className="text-xl font-bold mb-2">Enjoying {game.title}?</h3>
-                <p className="text-slate-300 text-sm mb-4">Share it with your friends and compete for the high score!</p>
-                <button className="w-full py-3 px-4 bg-white text-black font-bold rounded-xl transition-transform hover:scale-[1.02] active:scale-95">
-                  Share Game
-                </button>
+                {/* Responsive CTA / Share */}
+                <div className="rounded-3xl bg-gradient-to-br from-indigo-600/20 to-pink-600/20 p-6 border border-white/10 backdrop-blur-sm">
+                  <h3 className="text-lg md:text-xl font-bold mb-2">Enjoying {game.title}?</h3>
+                  <p className="text-slate-300 text-sm mb-4">Share it with your friends and compete for the high score!</p>
+                  <GameShareButton title={game.title} slug={game.slug} />
+                  <div className="mt-3 text-xs text-slate-400">
+                    Tip: Use your device's share menu or copy link to invite friends.
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
