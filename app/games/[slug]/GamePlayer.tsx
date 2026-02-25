@@ -22,25 +22,12 @@ export default function GamePlayer({ embedUrl, title, orientation }: Props) {
   /* ---------------- SCROLL LOCK ---------------- */
   const lockScroll = useCallback(() => {
     if (scrollLocked) return;
-    scrollYRef.current = window.scrollY;
-
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollYRef.current}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
-
+    document.body.style.overflow = "hidden";
     setScrollLocked(true);
   }, [scrollLocked]);
 
   const unlockScroll = useCallback(() => {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-
-    window.scrollTo(0, scrollYRef.current);
+    document.body.style.overflow = "";
     setScrollLocked(false);
     setInteractionCaptured(false);
   }, []);
@@ -63,11 +50,7 @@ export default function GamePlayer({ embedUrl, title, orientation }: Props) {
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.left = "";
-      document.body.style.right = "";
-      document.body.style.width = "";
+      document.body.style.overflow = "";
     };
   }, []);
 
@@ -126,9 +109,16 @@ export default function GamePlayer({ embedUrl, title, orientation }: Props) {
           onPointerDown={() => {
             lockScroll();
             setInteractionCaptured(true);
+            containerRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
           }}
-          className="absolute inset-0 z-20 cursor-pointer"
-        />
+          className="absolute inset-0 z-20 cursor-pointer flex items-center justify-center bg-black/20 backdrop-blur-[2px] group"
+        >
+          <div className="rounded-full bg-indigo-600/90 p-6 shadow-2xl transition-transform group-hover:scale-110">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
       )}
 
       <iframe

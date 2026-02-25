@@ -78,7 +78,7 @@ export default async function GameDetailPage({ params }: Props) {
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_400px]">
           {/* GAME PLAYER SIDE */}
-          <div className="flex flex-col gap-6">
+          <div id="game-player" className="flex flex-col gap-6">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 shadow-2xl backdrop-blur-sm">
               <GamePlayer
                 embedUrl={game.embedUrl}
@@ -126,19 +126,19 @@ export default async function GameDetailPage({ params }: Props) {
 
           {/* SIDEBAR SIDE */}
           <div className="flex flex-col gap-8">
-              <div className="lg:sticky lg:top-24 space-y-8">
-                <GameDetailClient game={game} />
+            <div className="lg:sticky lg:top-24 space-y-8">
+              <GameDetailClient game={game} />
 
-                {/* Responsive CTA / Share */}
-                <div className="rounded-3xl bg-gradient-to-br from-indigo-600/20 to-pink-600/20 p-6 border border-white/10 backdrop-blur-sm">
-                  <h3 className="text-lg md:text-xl font-bold mb-2">Enjoying {game.title}?</h3>
-                  <p className="text-slate-300 text-sm mb-4">Share it with your friends and compete for the high score!</p>
-                  <GameShareButton title={game.title} slug={game.slug} />
-                  <div className="mt-3 text-xs text-slate-400">
-                    Tip: Use your device's share menu or copy link to invite friends.
-                  </div>
+              {/* Responsive CTA / Share */}
+              <div className="rounded-3xl bg-gradient-to-br from-indigo-600/20 to-pink-600/20 p-6 border border-white/10 backdrop-blur-sm">
+                <h3 className="text-lg md:text-xl font-bold mb-2">Enjoying {game.title}?</h3>
+                <p className="text-slate-300 text-sm mb-4">Share it with your friends and compete for the high score!</p>
+                <GameShareButton title={game.title} slug={game.slug} />
+                <div className="mt-3 text-xs text-slate-400">
+                  Tip: Use your device's share menu or copy link to invite friends.
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
