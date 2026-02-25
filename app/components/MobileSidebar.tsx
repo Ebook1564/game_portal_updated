@@ -33,9 +33,8 @@ export default function MobileSidebar({ open, onClose }: Props) {
       />
 
       <aside
-        className={`absolute left-0 top-0 bottom-0 w-72 transform bg-[#0c1220] bg-linear-to-b from-slate-900/95 to-[#071026]/95 p-6 shadow-xl transition-transform ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`absolute left-0 top-0 bottom-0 w-72 transform bg-[#0c1220] bg-linear-to-b from-slate-900/95 to-[#071026]/95 p-6 shadow-xl transition-transform ${open ? "translate-x-0" : "-translate-x-full"
+          }`}
         aria-hidden={!open}
       >
         <div className="flex items-center justify-between">

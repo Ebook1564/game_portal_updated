@@ -73,7 +73,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
               <button
                 type="button"
                 onClick={() => onOpenSidebar?.()}
-                className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md bg-white/6 hover:bg-white/10"
+                className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md bg-white/6 hover:bg-white/10"
                 aria-label="Open sidebar"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -88,12 +88,12 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                 <span className="text-xl font-bold text-white tracking-wide hidden sm:inline">snappgames</span>
               </Link>
 
-          </div>  
+            </div>
             <div className="flex items-center gap-2 sm:gap-3">
               {/* Mobile: Search Icon Only */}
               <button
                 onClick={toggleMobileSearch}
-                className="md:hidden flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 shadow-xl transition-all"
+                className="lg:hidden flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 shadow-xl transition-all"
                 aria-label="Search games"
               >
                 <svg className="w-5 h-5 text-slate-300 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
               </button>
 
               {/* Desktop: Full Search Bar */}
-              <div className="hidden md:block relative" ref={searchRef}>
+              <div className="hidden lg:block relative" ref={searchRef}>
                 <div className="flex items-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all group px-4 py-3 shadow-xl w-64 lg:w-150">
                   <svg className="w-5 h-5 text-slate-300 group-hover:text-white mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -130,7 +130,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
 
                 {/* Desktop Search Results */}
                 {showResults && (
-                    <div className="absolute top-full left-0 right-0 mt-2 w-full max-w-[28rem] glass-gradient rounded-2xl shadow-2xl z-50 max-h-96 overflow-hidden animate-in slide-in-from-top-2 duration-200">                    
+                  <div className="absolute top-full left-0 right-0 mt-3 w-full max-w-[28rem] glass-gradient rounded-2xl shadow-2xl z-50 max-h-[70vh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
                     <div className="max-h-96 overflow-y-auto">
                       {searchResults.map((game) => (
                         <Link
@@ -171,7 +171,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                         </Link>
                       ))}
                     </div>
-                    
+
                     {searchResults.length === 6 && (
                       <div className="p-4 border-t border-white/10 bg-white/3">
                         <Link
@@ -187,8 +187,8 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
               </div>
 
               {/* Play Now Button */}
-              <Link 
-                href="/games" 
+              <Link
+                href="/games"
                 className="hidden sm:inline-block rounded-2xl bg-gradient-to-r from-indigo-600/90 to-purple-600/90 hover:from-indigo-500 hover:to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-200 border border-white/10 backdrop-blur-sm whitespace-nowrap"
               >
                 Play Now
@@ -199,7 +199,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                 aria-label="Toggle menu"
                 aria-expanded={open}
                 onClick={() => setOpen((v) => !v)}
-                className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md bg-white/6 hover:bg-white/10"
+                className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md bg-white/6 hover:bg-white/10"
               >
                 {open ? (
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -218,7 +218,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
 
       {/* Mobile Fullscreen Search */}
       {isMobileSearchOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-black/70 backdrop-blur-xl flex items-center justify-center p-4">
+        <div className="lg:hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-2xl flex items-center justify-center p-4 transition-all duration-300">
           <div ref={searchRef} className="w-full max-w-md relative">
             <div className="flex items-center rounded-2xl border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl px-5 py-4">
               <svg className="w-6 h-6 text-slate-300 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -289,7 +289,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                     </Link>
                   ))}
                 </div>
-                
+
                 {searchResults.length === 6 && (
                   <div className="p-5 border-t border-white/10 bg-white/5">
                     <Link
@@ -308,7 +308,7 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
       )}
 
       {/* Mobile menu */}
-      <div className={`${open ? "block" : "hidden"} md:hidden border-t border-white/5 bg-black/30 backdrop-blur-md`}>
+      <div className={`${open ? "block" : "hidden"} lg:hidden border-t border-white/5 bg-black/30 backdrop-blur-md`}>
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
           <div className="space-y-2">
             <Link href="#trending" className="block px-3 py-2 rounded-xl text-base font-medium text-slate-200 hover:text-white hover:bg-white/10 backdrop-blur transition-all">Trending</Link>
