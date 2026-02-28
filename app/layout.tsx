@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   other: {
     'google-adsense-account': 'ca-pub-3518028158462445',
   },
+  icons: {
+    // Fallback SVG logo placed in public/s-logo.svg
+    icon: '/s-logo.svg',
+    apple: '/s-logo.svg',
+    shortcut: '/s-logo.svg',
+  },
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 import { games, type Game } from "../data/games"; // Adjust path
 
 export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }) {
@@ -81,9 +82,11 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                 </svg>
               </button>
 
-              <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 shadow-md">
-                  <span className="text-xl font-black text-white italic">S</span>
+              <Link href="/" className="flex items-center gap-3 shrink-0">
+                <div className="relative h-10 w-10 rounded-lg overflow-hidden bg-white/5 shadow-md">
+                  {/* Attempt to load /s-logo.png; if it fails, show a styled fallback */}
+                  {/** Use client-side loading fallback to avoid broken image UI */}
+                  <LogoWithFallback />
                 </div>
                 <span className="text-xl font-bold text-white tracking-wide hidden sm:inline">snappgames</span>
               </Link>
@@ -321,5 +324,27 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
         </div>
       </div>
     </nav>
+  );
+}
+
+function LogoWithFallback() {
+  const [errored, setErrored] = useState(false);
+
+  if (errored) {
+    return (
+      <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-indigo-500 to-pink-500 text-white font-black text-lg">
+        <span className="italic">S</span>
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src="/s-logo.svg"
+      alt="snappgames"
+      fill
+      className="object-cover"
+      onError={() => setErrored(true)}
+    />
   );
 }
