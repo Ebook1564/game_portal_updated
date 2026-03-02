@@ -53,7 +53,7 @@ export default function RootLayout({
           gtag('js', new Date());
 
           gtag('config', 'G-FWXPGPGQVV');
-          gtag('config', 'AW-657242516'); 
+          gtag('config', 'AW-741218780');
           `}
       </Script>
       <body className="antialiased">
