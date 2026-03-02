@@ -56,6 +56,10 @@ export default function RootLayout({
           gtag('config', 'AW-741218780');
           `}
       </Script>
+
+      //Adstera
+      <script src="https://pl28828773.effectivegatecpm.com/8e/eb/bd/8eebbdf40c5cdace0a24748ccca27687.js"></script>
+     
       <body className="antialiased">
         {children}
       </body>
