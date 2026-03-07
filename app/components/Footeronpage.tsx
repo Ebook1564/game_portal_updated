@@ -68,7 +68,7 @@ export function Footer_on_page() {
             <nav className="flex flex-col gap-4">
               <Link href="/privacy" className="text-sm text-slate-400 hover:text-white hover:translate-x-2 transition-all flex items-center gap-2"><span className="h-px w-3 bg-slate-700"></span>Privacy Policy</Link>
               <Link href="/terms" className="text-sm text-slate-400 hover:text-white hover:translate-x-2 transition-all flex items-center gap-2"><span className="h-px w-3 bg-slate-700"></span>Terms of Service</Link>
-              <Link href="/enquire" className="text-sm text-slate-400 hover:text-white hover:translate-x-2 transition-all flex items-center gap-2"><span className="h-px w-3 bg-slate-700"></span>Business Enquiries</Link>
+              <a href="https://business.snappgames.com/enquire" target="_blank" rel="noreferrer" className="text-sm text-slate-400 hover:text-white hover:translate-x-2 transition-all flex items-center gap-2"><span className="h-px w-3 bg-slate-700"></span>Business Enquiries</a>
               <Link href="mailto:support@snappgames.com" className="text-sm text-slate-400 hover:text-white hover:translate-x-2 transition-all flex items-center gap-2"><span className="h-px w-3 bg-slate-700"></span>Support</Link>
             </nav>
           </div>
