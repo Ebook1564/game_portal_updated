@@ -82,13 +82,16 @@ export default function Navbar({ onOpenSidebar }: { onOpenSidebar?: () => void }
                 </svg>
               </button>
 
-              <Link href="/" className="flex items-center gap-3 shrink-0">
-                <div className="relative h-10 w-10 rounded-lg overflow-hidden bg-white/5 shadow-md">
+              <Link href="/" className="flex items-center gap-2 shrink-0 group">
+                <div className="relative h-10 w-10 flex items-center justify-center p-1 group-hover:scale-105 transition-all duration-300">
                   {/* Attempt to load /s-logo.png; if it fails, show a styled fallback */}
                   {/** Use client-side loading fallback to avoid broken image UI */}
                   <LogoWithFallback />
                 </div>
-                <span className="text-xl font-bold text-white tracking-wide hidden sm:inline">snappgames</span>
+                <span className="text-[26px] font-black tracking-tight hidden sm:flex items-center">
+                  <span className="text-white drop-shadow-sm">SNAPP</span>
+                  <span className="text-[#a800ff] drop-shadow-[0_0_8px_rgba(168,0,255,0.4)]">GAMES</span>
+                </span>
               </Link>
 
             </div>
@@ -339,12 +342,14 @@ function LogoWithFallback() {
   }
 
   return (
-    <Image
-      src="/s-logo.svg"
-      alt="snappgames"
-      fill
-      className="object-cover"
-      onError={() => setErrored(true)}
-    />
+    <div className="relative w-full h-full">
+      <Image
+        src="/s-logo.png"
+        alt="snappgames"
+        fill
+        className="object-contain drop-shadow-[0_0_8px_rgba(255,0,127,0.5)]"
+        onError={() => setErrored(true)}
+      />
+    </div>
   );
 }

@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     'google-adsense-account': 'ca-pub-3518028158462445',
   },
   icons: {
-    // Fallback SVG logo placed in public/s-logo.svg
-    icon: '/s-logo.svg',
-    apple: '/s-logo.svg',
-    shortcut: '/s-logo.svg',
+    // Updated logo placed in public/s-logo.png
+    icon: '/s-logo.png',
+    apple: '/s-logo.png',
+    shortcut: '/s-logo.png',
   },
 };
 
@@ -59,7 +59,7 @@ export default function RootLayout({
 
       {/* //Adstera */}
       {/* <script src="https://pl28828773.effectivegatecpm.com/8e/eb/bd/8eebbdf40c5cdace0a24748ccca27687.js"></script> */}
-     
+
       <body className="antialiased">
         {children}
       </body>
