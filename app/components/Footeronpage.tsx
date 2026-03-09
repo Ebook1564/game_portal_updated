@@ -102,7 +102,7 @@ export function Footer_on_page() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]"></span>
             </div>
-            <p className="text-sm font-medium text-slate-300">All systems operational</p>
+            {/* <p className="text-sm font-medium text-slate-300">All systems operational</p> */}
           </div>
         </div>
       </div>
