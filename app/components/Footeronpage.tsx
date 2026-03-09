@@ -35,7 +35,7 @@ export function Footer_on_page() {
             <p className="max-w-xs text-sm leading-relaxed text-slate-400">
               Transforming the digital landscape with premium HTML5 gaming experiences. Play instantly, anywhere, on any device.
             </p>
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-400 hover:bg-[#1DA1F2]/20 hover:text-[#1DA1F2] hover:border-[#1DA1F2]/50 transition-all duration-300">
                 <Twitter className="h-5 w-5" />
               </a>
@@ -48,7 +48,7 @@ export function Footer_on_page() {
               <a href="https://github.com/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-400 hover:bg-white/20 hover:text-white transition-all duration-300">
                 <Github className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
