@@ -63,7 +63,7 @@ export default function RootLayout({
           }
 
           gtag('config', 'G-FWXPGPGQVV', {
-            'user_id': userIdSource || 'organic'
+            'partner_uid': userIdSource || 'organic'
           });
           gtag('config', 'AW-741218780');
           `}
