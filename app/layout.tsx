@@ -52,12 +52,18 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date());
 
-          // Capture user id from URL search params (matches database 'id' field)
+          // Capture user id and persist it for the entire session
           const urlParams = new URLSearchParams(window.location.search);
-          const userIdSource = urlParams.get('id');
+          let userIdSource = urlParams.get('id');
+          
+          if (userIdSource) {
+            sessionStorage.setItem('snapp_partner_id', userIdSource);
+          } else {
+            userIdSource = sessionStorage.getItem('snapp_partner_id');
+          }
 
           gtag('config', 'G-FWXPGPGQVV', {
-            'user_id': userIdSource || 'direct'
+            'user_id': userIdSource || 'organic'
           });
           gtag('config', 'AW-741218780');
           `}
