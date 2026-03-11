@@ -52,7 +52,18 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date());
 
-          // Capture user id and persist it for the entire session
+          // Function to restore ID to URL bar
+          const restoreId = () => {
+            const params = new URLSearchParams(window.location.search);
+            const storedId = sessionStorage.getItem('snapp_partner_id');
+            if (storedId && !params.has('id')) {
+              params.set('id', storedId);
+              const newUrl = window.location.pathname + '?' + params.toString() + window.location.hash;
+              window.history.replaceState({ path: newUrl }, '', newUrl);
+            }
+          };
+
+          // Capture user id and persist it
           const urlParams = new URLSearchParams(window.location.search);
           let userIdSource = urlParams.get('id');
           
@@ -60,7 +71,18 @@ export default function RootLayout({
             sessionStorage.setItem('snapp_partner_id', userIdSource);
           } else {
             userIdSource = sessionStorage.getItem('snapp_partner_id');
+            restoreId();
           }
+
+          // Listen for client-side navigation changes
+          let lastUrl = location.href;
+          new MutationObserver(() => {
+            const url = location.href;
+            if (url !== lastUrl) {
+              lastUrl = url;
+              restoreId();
+            }
+          }).observe(document, {subtree: true, childList: true});
 
           gtag('config', 'G-FWXPGPGQVV', {
             'partner_uid': userIdSource || 'organic'
