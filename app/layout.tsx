@@ -52,7 +52,13 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date());
 
-          gtag('config', 'G-FWXPGPGQVV');
+          // Capture user id from URL search params (matches database 'id' field)
+          const urlParams = new URLSearchParams(window.location.search);
+          const userIdSource = urlParams.get('id');
+
+          gtag('config', 'G-FWXPGPGQVV', {
+            'user_id': userIdSource || 'direct'
+          });
           gtag('config', 'AW-741218780');
           `}
       </Script>
