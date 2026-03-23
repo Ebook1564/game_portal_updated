@@ -18,6 +18,7 @@ const nekst = localFont({
 export const metadata: Metadata = {
   other: {
     'google-adsense-account': 'ca-pub-3518028158462445',
+    'monetag': '72f922c6abf459374c6a9230024e656c',
   },
   icons: {
     // Updated logo placed in public/s-logo.png
